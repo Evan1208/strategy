@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+
+    <string-array name="Coffee">
+        <item>Espresso</item>
+        <item>HouseBlend</item>
+    </string-array>
+
+    <string-array name="Condiments">
+        <item>Mocha</item>
+        <item>Soy</item>
+        <item>Whip</item>
+        <item>Bitter</item>
+    </string-array>
+
+    <string-array name="Weapon">
+        <item>Axe</item>
+        <item>Bat</item>
+        <item>ChopStick</item>
+        <item>Fist</item>
+        <item>Gun</item>
+        <item>Knife</item>
+        <item>WoodStick</item>
+    </string-array>
+
+</resources>

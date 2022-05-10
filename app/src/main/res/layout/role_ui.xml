@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp">
+
+        <Button
+            android:id="@+id/mCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:textColor="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/mName"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:text="Name"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/mWeapon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/mRace"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:text="Race"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="@+id/mHeight"
+            app:layout_constraintRight_toRightOf="@+id/mHeight"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/mAge"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:text="Age"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="@+id/mWeapon"
+            app:layout_constraintTop_toBottomOf="@+id/mName"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/mHeight"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:text="Height"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/mLiveStatus"
+            app:layout_constraintLeft_toLeftOf="@+id/mLiveStatus"
+            app:layout_constraintRight_toRightOf="@+id/mLiveStatus"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/mWeapon"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Weapon"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mAge" />
+
+        <TextView
+            android:id="@+id/mLiveStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:gravity="center"
+            android:text="LiveStatus"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@+id/mWeapon"
+            app:layout_constraintTop_toTopOf="@+id/mWeapon" />
+
+        <LinearLayout
+            android:id="@+id/mTamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/mLiveStatus">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:ignore="Suspicious0dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Race" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Weapon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="LiveStatus" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mTamp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
